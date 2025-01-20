@@ -60,7 +60,7 @@ platform_identifiers = {
     } if args.yuzu else {
     'home_url': "https://bookshelf.vitalsource.com",
     'jigsaw_url': "https://jigsaw.vitalsource.com",
-    'total_pages': "sc-knKHOI gGldJU",
+    'total_pages': "sc-ywFzA ikyxaM",
     'current_page': "InputControl__input-fbzQBk hDtUvs TextField__InputControl-iza-dmV iISUBf",
     'page_loader': "sc-AjmGg dDNaMw",
     'next_page': "IconButton__button-bQttMI gHMmeA sc-oXPCX mwNce",
@@ -87,7 +87,7 @@ def get_num_pages():
 
 
 def load_book_page(page_id):
-    driver.get(platform_identifiers['home_url']+'/reader/books/{args.isbn}/pageid/{page_id}')
+    driver.get(platform_identifiers['home_url'] + f'/reader/books/{args.isbn}/pageid/{page_id}')
     get_num_pages()  # Wait for the page to load
     # Wait for the page loader animation to disappear
     while len(driver.find_elements(By.CLASS_NAME, platform_identifiers['page_loader'])):

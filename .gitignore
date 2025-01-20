@@ -1,7 +1,9 @@
 venv/
+.venv/
 .idea/
 geckodriver
 VitalSource/
+/output
 
 # ---> Python
 # Byte-compiled / optimized / DLL files
